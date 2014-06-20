@@ -2,8 +2,6 @@ lqmon
 =====
 _A wireless link quality monitor_
 
-Components
-----------
 This package consists of two parts: a network device monitor that tracks the
 aforementioned link quality metrics, and a traffic generator. The device
 monitor can be used as a standalone node in any system needing link quality
@@ -12,12 +10,13 @@ to stress a network connection.
 
 Purpose
 -------
-If I can determine a correlation between the link quality of an established
-link and the bandwidth of that link, perhaps I could estimate the bandwidth of
-any other access point without establishing a link.
+If we can correlate the link quality of an established link and the bandwidth
+of that link, perhaps we could estimate the bandwidth of any other access point
+without establishing a link.
 
 Being able to predict or communicate the future availability of the currently
-online nodes may be useful for cooperative robotic exploration.
+online (but not necessarily connected) nodes may be useful for cooperative
+robotic exploration.
 
 Notes
 -----
@@ -35,3 +34,4 @@ A few metrics we could consider to determine link quality (thereby bandwidth):
     transceivers.
 
 cat'ing /proc/net/wireless provides some useful information.
+
