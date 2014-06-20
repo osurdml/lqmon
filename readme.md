@@ -2,6 +2,22 @@ lqmon
 =====
 _A wireless link quality monitor_
 
+Components
+----------
+This package consists of two parts: a network device monitor that tracks the
+aforementioned link quality metrics, and a traffic generator. The device
+monitor can be used as a standalone node in any system needing link quality
+measurements. The traffic generator generates pseudorandom traffic with which
+to stress a network connection.
+
+Purpose
+-------
+If I can determine a correlation between the link quality of an established
+link and the bandwidth of that link, perhaps I could estimate the bandwidth of
+any other access point without establishing a link.
+
+Notes
+-----
 A few metrics we could consider to determine link quality (thereby bandwidth):
 
   * SNR: Signal-to-noise ratio, affected by multipath and interference.
@@ -15,19 +31,4 @@ A few metrics we could consider to determine link quality (thereby bandwidth):
   * ToA: Time of Arrival, or travel time of a radio signal between two
     transceivers.
 
-Estimating available bandwidth of inactive links
-------------------------------------------------
-I could try estimating the link quality of an established link using the
-metrics above while measuring the available bandwidth and attempt to correlate
-the two. Then, theoretically, I could estimate the available bandwidth to any
-other access point without an active link.
-
-Components
-----------
-This package consists of two parts: a network device monitor that tracks the
-aforementioned link quality metrics, and a traffic generator. The device
-monitor can be used as a standalone node in any system needing link quality
-measurements. The traffic generator generates pseudorandom traffic with which
-to stress a network connection.
-
-
+cat'ing /proc/net/wireless provides some useful information.
