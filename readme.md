@@ -16,6 +16,9 @@ If I can determine a correlation between the link quality of an established
 link and the bandwidth of that link, perhaps I could estimate the bandwidth of
 any other access point without establishing a link.
 
+Being able to predict or communicate the future availability of the currently
+online nodes may be useful for cooperative robotic exploration.
+
 Notes
 -----
 A few metrics we could consider to determine link quality (thereby bandwidth):
